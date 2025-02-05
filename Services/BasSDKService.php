@@ -45,16 +45,6 @@ class BasSDKService
          $response =    self::httpPostGetToken(self::GetTokenUrl(), $body, $header);
          $response = json_decode($response, true);
          return $response;
-        //  if (!is_array($response)) {
-        //      return null;
-        //  } else {
- 
-        //      if (array_key_exists('access_token', $response)) {
-        //          //  $response=json_decode($response, true);
-        //          // echo $response;
-        //          return $response['access_token'];
-        //      }
-        //  }
  
         
      }
