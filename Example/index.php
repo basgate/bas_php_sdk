@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (array_key_exists('login', $_POST)) {
         login();
     } else if (array_key_exists('user_info', $_POST)) {
-        UserInfoV2();
+        UserInfo();
     } else if (array_key_exists('initiate_payment', $_POST)) {
         InitiatePayment();
     } else if (array_key_exists('check_payment_status', $_POST)) {
@@ -82,7 +82,7 @@ function login()
     }
 }
 
-function UserInfoV2()
+function UserInfo()
 {
     $authCode = isset($_COOKIE['AuthCode']) ? $_COOKIE['AuthCode'] : null;
     if (!is_null($authCode)) {
@@ -105,6 +105,8 @@ function UserInfoV2()
         echo "AuthCode cookie not found.";
     }
 }
+ 
+
 
 function InitiatePayment()
 {
