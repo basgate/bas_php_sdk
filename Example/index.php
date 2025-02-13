@@ -82,6 +82,8 @@ function login()
     }
 }
 
+
+
 function UserInfo()
 {
     $authCode = isset($_COOKIE['AuthCode']) ? $_COOKIE['AuthCode'] : null;
@@ -105,8 +107,6 @@ function UserInfo()
         echo "AuthCode cookie not found.";
     }
 }
- 
-
 
 function InitiatePayment()
 {
